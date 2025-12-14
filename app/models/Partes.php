@@ -1,0 +1,20 @@
+<?php
+/**
+ * Modelo Partes
+ */
+class Partes{
+    private $db;
+    private $table = 'partes';
+
+    public function __construct(){
+        $this->db = new Base($this->table);
+    }
+
+    public function all(){
+        return $this->db->get();
+    }
+
+    public function find($id){
+        return $this->db->find($id);
+    }
+}

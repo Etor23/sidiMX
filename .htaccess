@@ -1,0 +1,9 @@
+# preparacion  para url amigables
+# Carpeta general
+
+RewriteEngine On
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
+</ifModule>
